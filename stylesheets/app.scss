@@ -1,38 +1,52 @@
 body {
-        color: #000000;
-                background-color: #ffffff;
-                -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
-    }
-    h2 { #000000; }
-    .main-content p { color: #000000; }
-        .main-content a { color: #000000; }
-        ul.social-connections li a { color: #000000; }
+    color: #000000;
+    background-color: #ffffff;
+    -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+}
 
-            .container .full-content-wrapper { padding: 0; }
-    
-        .full-content-wrapper .bg-color { opacity: 0; background-color: #000000; }
-    
-        @media only screen and (max-width: 1019px) {
-        .container .full-content-wrapper { padding: 0; }
-    }
 
-    @media only screen and (max-width: 719px) {
-        .container .full-content-wrapper { padding: 0; }
-    }
 
-    @media only screen and (max-width: 419px) {
-        .container .full-content-wrapper { padding: 0; }
-    }
+.main-content p { 
+    color: #000000; 
+}
+
+.main-content a { 
+    color: #000000; 
+}
+
+ul.social-connections li a { 
+    color: #000000; 
+}
+
+.container .full-content-wrapper { 
+    padding: 0; 
+}
     
-            h1 { color: #000000; }
-    #map { border-color: #000000; }
-    #toggleForm { color: #000000; border-color: #000000; }
-    .main-content button, button { background-color: #000000; }
-    .main-content input, .main-content textarea { background-color: rgba(153, 153, 153, 0.15); color: rgb(92, 92, 92); }
-    input::-webkit-input-placeholder { color: rgb(92, 92, 92); }
-    input:-moz-placeholder { color: rgb(92, 92, 92); }
-    textarea::-webkit-input-placeholder { color: rgb(92, 92, 92); }
-    textarea:-moz-placeholder { color: rgb(92, 92, 92); }
-    p {
-        color: black !important;
-    }
+.full-content-wrapper .bg-color { 
+    opacity: 0; background-color: #000000; 
+}
+    
+@media only screen and (max-width: 1019px) {
+    .container .full-content-wrapper { padding: 0; }
+}
+
+@media only screen and (max-width: 719px) {
+    .container .full-content-wrapper { padding: 0; }
+}
+
+@media only screen and (max-width: 419px) {
+    .container .full-content-wrapper { padding: 0; }
+}
+
+h1 { color: #000000; }
+#map { border-color: #000000; }
+#toggleForm { color: #000000; border-color: #000000; }
+.main-content button, button { background-color: #000000; }
+.main-content input, .main-content textarea { background-color: rgba(153, 153, 153, 0.15); color: rgb(92, 92, 92); }
+input::-webkit-input-placeholder { color: rgb(92, 92, 92); }
+input:-moz-placeholder { color: rgb(92, 92, 92); }
+textarea::-webkit-input-placeholder { color: rgb(92, 92, 92); }
+textarea:-moz-placeholder { color: rgb(92, 92, 92); }
+p {
+    color: black !important;
+}
