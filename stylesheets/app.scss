@@ -1,52 +1,172 @@
-body {
-    color: #000000;
-    background-color: #ffffff;
-    -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+@import "normalize";
+
+$sans:           Helvetica Neue, Helvetica, Arial, sans-serif;
+$serif:         Minion Pro, Georgia;
+$black:         #333333;
+$yellow:        #FFFF00;
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-family: $serif !important;
+}
+h1 {
+    font-size: 60px; 
+}
+h3 {
+    font-size: 30px;
 }
 
-
-
-.main-content p { 
-    color: #000000; 
+a {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+    padding-bottom: 2px;
+    &:hover {
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
 }
 
-.main-content a { 
-    color: #000000; 
-}
-
-ul.social-connections li a { 
-    color: #000000; 
-}
-
-.container .full-content-wrapper { 
-    padding: 0; 
-}
-    
-.full-content-wrapper .bg-color { 
-    opacity: 0; background-color: #000000; 
-}
-    
-@media only screen and (max-width: 1019px) {
-    .container .full-content-wrapper { padding: 0; }
-}
-
-@media only screen and (max-width: 719px) {
-    .container .full-content-wrapper { padding: 0; }
-}
-
-@media only screen and (max-width: 419px) {
-    .container .full-content-wrapper { padding: 0; }
-}
-
-h1 { color: #000000; }
-#map { border-color: #000000; }
-#toggleForm { color: #000000; border-color: #000000; }
-.main-content button, button { background-color: #000000; }
-.main-content input, .main-content textarea { background-color: rgba(153, 153, 153, 0.15); color: rgb(92, 92, 92); }
-input::-webkit-input-placeholder { color: rgb(92, 92, 92); }
-input:-moz-placeholder { color: rgb(92, 92, 92); }
-textarea::-webkit-input-placeholder { color: rgb(92, 92, 92); }
-textarea:-moz-placeholder { color: rgb(92, 92, 92); }
 p {
-    color: black !important;
+    font-family: $sans !important;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto; 
+}
+
+header {
+    text-align: center;
+    margin: 40px 0;
+    .nydc-logo {
+        margin: 40px auto;
+
+    }
+}
+
+.nydc-logo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('/images/nydc-yellow.png');
+}
+
+.contact {
+    text-align: center;
+    font-family: $sans;
+    font-size: 16px;
+    span {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+section {
+    margin: 80px 0;
+    h2 {
+        font-size: 40px; 
+        text-align: center; 
+    }
+}
+
+.partners {
+    .partner {
+        float: left;
+        text-align: center;
+        width: 50%;
+        p {
+            font-style: 14px;
+            line-height: normal;
+            margin: 10px 0;
+        }
+    }
+}
+.portfolio-grid {
+    margin: 40px auto;
+    div {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 160px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        &.theminute {
+            background-image: url('/images/logo-theminute.png');
+        }
+        &.lightning {
+            background-image: url('/images/logo-lightning.png');
+            
+        }
+        &.trainspotting {
+            background-image: url('/images/logo-trainspotting.png');
+            &:after {
+                border-right: 1px solid black;
+            }
+        }
+        &.haus {
+            background-image: url('/images/logo-haus.png');
+            
+        }
+        .overlay {
+            display: none;
+        }
+        .logo {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            box-sizing: border-box;
+            &:hover {
+                .overlay {
+                    width: 100%;
+                    padding: 10px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba($yellow, .75);
+                    box-sizing: border-box;
+                    h5 {
+                        font-size: 24px; 
+                        font-family: $sans;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        margin: 0 0 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    margin: 80px 0;
+    p {
+        text-align: center;
+        font-size: 12px; 
+    }
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
 }
