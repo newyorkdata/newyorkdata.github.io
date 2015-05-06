@@ -17,18 +17,16 @@ $red:           #FF0000;
     background-blend-mode: multiply;
 }
 
-%clearfix {
-    .cf:before,
-    .cf:after {
-        content: " "; /* 1 */
-        display: table; /* 2 */
-    }
-    .cf:after {
-        clear: both;
-    }
-    .cf {
-        *zoom: 1;
-    }
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
 }
 
 h1, h2, h3, h4, h5 {
@@ -63,10 +61,10 @@ body {
     }
     &:after {
         @extend %blocks;
-        width: 300px;
+        width: 150px;
         height: 180px;
         background-color: $pink;
-        top: 28%;
+        top: 2%;
         right: 17%;
         z-index: -9999;
     }
@@ -99,9 +97,9 @@ header {
                 bottom: -40px;
                 right: -40px;
                 font-size: 200px;
-                line-height: 120px;
+                line-height: 0;
                 font-style: normal;
-                color: $yellow;
+                color: $cyan;
                 mix-blend-mode: multiply; 
             }
         }
@@ -129,7 +127,27 @@ table {
         border-collapse: collapse;
     }
     td {
+        position: relative;
         width: 50%;
+        h3 {
+            position: relative;
+            &:before {
+                @extend %blocks;
+                top: -2%;
+                left: 10%;
+                width: 140px;
+                height: 50px;
+                background-color: $cyan;
+            }
+            &:last-child:after {
+                @extend %blocks;
+                top: 0;
+                right: 0;
+                width: 80px;
+                height: 80px;
+                background-color: $yellow;
+            }
+        }
     }
 }
 
@@ -164,7 +182,6 @@ section {
         font-size: 40px;
         text-align: center; 
     }
-
 
     &.contact {
         text-align: center;
