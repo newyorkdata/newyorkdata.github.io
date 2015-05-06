@@ -3,16 +3,27 @@ extends layout
 block content
     .wrap
         header
-            .header-content
-                .nydc-logo
-                h2 New York's Data-Driven Production Company
+            h1
+                span What's bred in the bone 
+                em will come out in the flesh.
+        table   
+            td
+                h2.logo
+                    div
+                        span New York
+                    div 
+                        span Data 
+                    div 
+                        span Company
+            td
+                h3
+                    span A New Breed of Product Development
 
-        .contact
-            span 
-                strong Email: 
+        section.contact
+            span
+                strong Work with NYDC:
                 a(href='mailto:info@nydata.co') info@nydata.co
-            
-            span 
+            span
                 strong Twitter: 
                 a(href="https://twitter.com/NewYorkData", title="Follow us on Twitter")
                     | @NewYorkData 
@@ -21,54 +32,24 @@ block content
                 a(href="https://angel.co/new-york-data-company") Angelist
 
         section.partners
-            .cf
-                .partner
-                    h3 Matthew Conlen
-                    h4 Partner
-                    p
-                        a(href="mailto:mc@nydata.co") mc@nydata.co
-                    p
-                        a(href="https://twitter.com/mathisonian") @mathisonian
-                    p
-                        a(href="https://www.linkedin.com/in/matthewconlen") Matthew on LinkedIn
-                .partner
-                    h3 Andrew Sass
-                    h4 Partner
-                    p
-                        a(href="mailto:andrew@nydata.co") andrew@nydata.co
-                    p
-                        a(href="https://twitter.com/andrewsass") @andrewsass
-                    p
-                        a(href="https://linkedin.com/in/andrewsass") Andrew on LinkedIn
-        
-        //- section.portfolio
-            h2 Portfolio
+            .partner
+                h3 Matt Conlen
+                h4 Partner
+                p
+                    a(href="mailto:mc@nydata.co") mc@nydata.co
+                p
+                    a(href="https://twitter.com/mathisonian") @mathisonian
+                p
+                    a(href="https://www.linkedin.com/in/matthewconlen") Matthew on LinkedIn
+            .partner
+                h3 Andrew Sass
+                h4 Partner
+                p
+                    a(href="mailto:andrew@nydata.co") andrew@nydata.co
+                p
+                    a(href="https://twitter.com/andrewsass") @andrewsass
+                p
+                    a(href="https://linkedin.com/in/andrewsass") Andrew on LinkedIn
 
-            .portfolio-grid.cf
-                div.theminute
-                    .logo
-                        .overlay
-                            h5 The Minute
-                            p Translate and summarize the best non-english media and news sites.
-                            p Coming Soon
-                div.lightning
-                    .logo
-                        .overlay
-                            h5 Lightning
-                            p Translate and summarize the best non-english media and news sites.
-                            p
-                                a(href="http://lightning.mathisonian.com/") Beta Here
-                div.trainspotting
-                    .logo
-                        .overlay
-                            h5 Trainspotting
-                            p Translate and summarize the best non-english media and news sites.
-                div.haus
-                    .logo
-                        .overlay
-                            h5 Haus
-                            p Translate and summarize the best non-english media and news sites.
-
-        section.footer
-            p
-                | Copyright 2014. The New York Data Company.
+    footer
+        small Copyright 2014. The New York Data Company.
