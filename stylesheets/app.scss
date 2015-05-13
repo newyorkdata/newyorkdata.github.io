@@ -4,6 +4,7 @@ $sans:          Helvetica Neue, Helvetica, Arial, sans-serif;
 $titles:        "din-condensed-web", Helvetica;
 $serif:         "ltc-bodoni-175", serif;
 $black:         #333333;
+$white:         #FAFAFA;
 $yellow:        #FFFF00;
 $pink:          #D84C90;
 $cyan:          #9EFFE5;
@@ -50,6 +51,11 @@ p {
 }
 
 body {
+    background: white;
+    border: 20px solid $white;
+    color: $black;
+    position: relative;
+    z-index: 0;
     &:before {
         @extend %blocks;
         width: 200px;
@@ -79,7 +85,6 @@ body {
 header {
     margin: 40px 0;    
     h1 {
-        color: $black;
         mix-blend-mode: multiply;
         font-family: $serif;
         font-size: 60px;
