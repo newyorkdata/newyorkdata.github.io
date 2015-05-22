@@ -1,0 +1,50 @@
+@media only screen and (max-width: 800px) {
+	body {
+		padding: 10px;
+	}
+	.page {
+		padding: 5%;
+	}
+	h2.logo {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	section {
+		&.contact {			
+			span {
+				display: block;
+				margin: 30px 0;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+  .page {
+  	padding: 10% 2%;
+  }
+  header {
+  	h1 {
+
+  	}
+  	h2.logo {
+  		font-size: 70px;
+  		line-height: 60px;
+  	}
+  }
+  section.partners {
+  	.partner {
+  		display: block;
+  		width: 100%;
+  		margin-bottom: 40px;
+  	}
+  }
+  section.clients {
+  	ul li {
+  		display: block;
+  		a {
+  			display: inline-block;
+  		}
+  	}
+  }
+}

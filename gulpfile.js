@@ -43,7 +43,7 @@ gulp.task('gzip', ['build'], function() {
 
 gulp.task('browserify', function() {
     // Single entry point to browserify
-    return gulp.src('./js/app.js')
+    return gulp.src('./src/js/app.js')
         .pipe(browserify({
             debug : !PRODUCTION_MODE
         }))
@@ -57,7 +57,7 @@ gulp.task('browserify', function() {
 
 gulp.task('css', function() {
     return gulp
-            .src('./stylesheets/app.scss')
+            .src('./src/stylesheets/app.scss')
             .pipe(
                 sass({
                     includePaths: ['./stylesheets'],
@@ -71,14 +71,14 @@ gulp.task('css', function() {
 
 gulp.task('fonts', function() {
     return gulp
-            .src('./fonts/**/*.{otf,svg,ttf,woff,eot}')
+            .src('./src/fonts/**/*.{otf,svg,ttf,woff,eot}')
             .pipe( gulp.dest('./public/fonts/') )
             .pipe( livereload( server ));
 });
 
 gulp.task('images', function() {
     return gulp
-            .src('./images/**/*')
+            .src('./src/images/**/*')
             .pipe( gulp.dest('./public/images/') )
             .pipe( livereload( server ));
 });
@@ -88,7 +88,7 @@ gulp.task('jade', function() {
     // delete require.cache[require.resolve('./js/utils')];
     // var utils = require('./js/utils');
     
-    return gulp.src('./templates/index.jade')
+    return gulp.src('./src/templates/index.jade')
                .pipe(jade({
                     pretty: !PRODUCTION_MODE,
                     locals: {
@@ -118,9 +118,9 @@ gulp.task('watch', function () {
       return console.log(err);
     }
  
-    gulp.watch('./stylesheets/**/*.{scss,css}',['css', 'jade']);
-    gulp.watch('./js/**/*.js',['js']);
-    gulp.watch('./templates/**/*.jade',['jade', 'js']);
+    gulp.watch('./src/stylesheets/**/*.{scss,css}',['css', 'jade']);
+    gulp.watch('./src/js/**/*.js',['js']);
+    gulp.watch('./src/templates/**/*.jade',['jade', 'js']);
   });
 });
 
