@@ -7,5 +7,5 @@ cp -r .tmp/* .
 git add .
 git commit -m "rebuild"
 git push origin master
-git checkout src
+git checkout autopages
 echo "New site pushed successfully."
