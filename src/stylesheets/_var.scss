@@ -13,6 +13,27 @@ $time: 20s;
 $hue-range: 35;
 
 
+@-webkit-keyframes colorChange{
+  @for $i from 0 through $stops{
+    $old-color: adjust-hue($cyan, (360/$stops)*$i);
+    $new-color: adjust-hue($cyan, (360/$stops)*$i + $hue-range);
+    #{$i}% {
+      background: -webkit-linear-gradient(left, $old-color, $new-color);
+      background: linear-gradient(to right, $old-color, $new-color);
+    }
+  } 
+}
+
+@keyframes colorChange{
+  @for $i from 0 through $stops{
+    $old-color: adjust-hue($cyan, (360/$stops)*$i);
+    $new-color: adjust-hue($cyan, (360/$stops)*$i + $hue-range);
+    #{$i}% {
+      background: linear-gradient(to right, $old-color, $new-color);
+    }
+  } 
+}
+
 @mixin bg-img($png, $svg, $bg-size, $x, $y ) {
     background-image: url('/images/#{$png}.png');
     background-image: none, url('/images/#{$svg}.svg');

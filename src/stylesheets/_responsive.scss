@@ -1,10 +1,21 @@
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 @media only screen and (max-width: 800px) {
 	body {
-		padding: 10px;
+		// padding: 10px;
 	}
 	.page {
-		padding: 5%;
+		padding: 1rem;
 	}
+  header {
+    display: none;
+  }
 	h2.logo {
 		font-size: 40px;
 		line-height: 40px;
@@ -12,16 +23,39 @@
 	section {
 		&.contact {			
 			span {
-				display: block;
-				margin: 30px 0;
 			}
 		}
 	}
 }
 
+@media only screen and (max-width: 540px) {
+  section.partners {
+    .partner {
+      text-align: left;
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      p {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+  section.clients {
+    ul li {
+      width: 48%;
+      padding: 1%;
+    }
+  }
+
+}
+
 @media only screen and (max-width: 480px) {
+  body {
+    padding: .5rem;
+  }
   .page {
-  	padding: 10% 2%;
+  	
   }
   header {
   	h1 {
@@ -32,19 +66,31 @@
   		line-height: 60px;
   	}
   }
-  section.partners {
-  	.partner {
-  		display: block;
-  		width: 100%;
-  		margin-bottom: 40px;
-  	}
+  section.contact {
+    span {
+      strong, a {
+        display: block;
+      }
+      strong {
+        font-size: .7rem;
+        font-family: $titles;
+        text-transform: uppercase;
+        @extend %kern;
+      }
+      a {
+        font-size: 2rem;
+      }
+      margin-bottom: 2rem;
+      line-height: normal;
+    }
   }
+}
+
+@media only screen and (max-width: 380px) {
   section.clients {
-  	ul li {
-  		display: block;
-  		a {
-  			display: inline-block;
-  		}
-  	}
-  }
+    ul li {
+      width: 96%;
+      padding: 2%;
+    }
+  } 
 }

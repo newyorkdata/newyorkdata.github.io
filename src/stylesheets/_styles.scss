@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    padding: 20px;
+    padding: 1rem;
     color: $white;
     position: relative;
     font-family: $sans;
@@ -27,18 +27,28 @@ a {
         transition: width .2s ease;
         z-index: 1;
     }
-    &:hover {
+    &::hover {
         color: $cyan;
         text-decoration: none;
         &::after {
             width: 100%;
         }
     }
+    &:active, &:focus {
+        color: $cyan;
+        outline: none;
+        border: none; 
+        &::after {
+            display: none;
+            outline: none;
+            border: none;
+        }
+    }    
 }
 
 .page {
     background: $black;
-    padding: 5%;
+    padding: 1rem;
     padding-top: 18rem;
 }
 
@@ -199,26 +209,4 @@ footer {
         font-size: .75rem;
         font-family: $serif; 
     }
-}
-
-
-@-webkit-keyframes colorChange{
-  @for $i from 0 through $stops{
-    $old-color: adjust-hue($cyan, (360/$stops)*$i);
-    $new-color: adjust-hue($cyan, (360/$stops)*$i + $hue-range);
-    #{$i}% {
-      background: -webkit-linear-gradient(left, $old-color, $new-color);
-      background: linear-gradient(to right, $old-color, $new-color);
-    }
-  } 
-}
-
-@keyframes colorChange{
-  @for $i from 0 through $stops{
-    $old-color: adjust-hue($cyan, (360/$stops)*$i);
-    $new-color: adjust-hue($cyan, (360/$stops)*$i + $hue-range);
-    #{$i}% {
-      background: linear-gradient(to right, $old-color, $new-color);
-    }
-  } 
 }
