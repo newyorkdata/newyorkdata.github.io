@@ -16,7 +16,7 @@ a {
     text-decoration: none;
     transition: all .2s ease;
     position: relative;
-    &::after {
+    &:after {
         content: '';
         height: 2px;
         left: 0;
@@ -27,10 +27,10 @@ a {
         transition: width .2s ease;
         z-index: 1;
     }
-    &::hover {
+    &:hover {
         color: $cyan;
         text-decoration: none;
-        &::after {
+        &:after {
             width: 100%;
         }
     }
@@ -38,7 +38,7 @@ a {
         color: $cyan;
         outline: none;
         border: none; 
-        &::after {
+        &:after {
             display: none;
             outline: none;
             border: none;
@@ -54,7 +54,7 @@ a {
 
 .wrap {
     width: 100%;
-    max-width: 840px;
+    max-width: 680px;
     margin: 0 auto;
 }
 
@@ -74,12 +74,12 @@ header {
         @extend %align-vertical;
         @extend %kern;
     }
-    &::after {
+    &:after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        @include bg-img('bredinbone@2x', 'bredinbone', 100%, 50%, 50%);
+        @include bg-img('bredinbone@2x', 'bredinbone', 150%, 50%, 50%);
         opacity: .02;
         z-index: 0;
     }
@@ -87,7 +87,14 @@ header {
 
 .hero {
     color: $white;
-    h1 {}
+    .nydc {
+        width: 90px;
+        height: 80px;
+        @include bg-img('nydc@2x', 'nydc', 100%, 50%, 50%);
+    }
+    h1 {
+        margin: 2rem 0;
+    }
     p {}
 }
 
@@ -110,7 +117,7 @@ table {
 }
 
 section {
-    margin: 80px 0;
+    margin: 6rem 0;
     h2 {
         text-align: center; 
     }
@@ -142,7 +149,7 @@ section {
                 width: 100%;
                 height: 60px;
                 line-height: 64px;
-                &::after {
+                &:after {
                     display: none;
                 }
                 &:hover {
@@ -174,7 +181,10 @@ section {
             text-align: center;
             position: relative;
             float: left;
-            width: 50%;
+            width: 48%;
+            margin: 0 1%; 
+            padding: 4rem 0;
+            background-color: darken($black, 2%);
             
             h3 {
                 margin-bottom: 10px;

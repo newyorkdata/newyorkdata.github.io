@@ -34,10 +34,14 @@ a {
       text-align: left;
       display: block;
       width: 100%;
-      margin-bottom: 40px;
+      padding: 0;
+      background: none;
       p {
         font-size: 2rem;
         line-height: 2.6rem;
+      }
+      &:first-child {
+        margin-bottom: 3rem;
       }
     }
   }
@@ -53,18 +57,6 @@ a {
 @media only screen and (max-width: 480px) {
   body {
     padding: .5rem;
-  }
-  .page {
-  	
-  }
-  header {
-  	h1 {
-
-  	}
-  	h2.logo {
-  		font-size: 70px;
-  		line-height: 60px;
-  	}
   }
   section.contact {
     span {
@@ -87,6 +79,13 @@ a {
 }
 
 @media only screen and (max-width: 380px) {
+  .hero h1 {
+    span {
+      display: block;
+    }
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
   section.clients {
     ul li {
       width: 96%;
