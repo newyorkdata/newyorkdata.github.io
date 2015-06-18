@@ -113,177 +113,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: "superior";
-  src: url("/fonts/superior/superior-title-black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: "superior";
-  src: url("/fonts/superior/superior-title-black-italic.otf") format("opentype");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: "cooper-hewitt";
-  src: url("/fonts/cooper-hewitt/cooper-hewitt-book.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "cooper-hewitt";
-  src: url("/fonts/cooper-hewitt/cooper-hewitt-book-italic.otf") format("opentype");
-  font-weight: normal;
-  font-style: italic; }
-
-.cf:before, .cf:after {
-  content: " ";
-  display: table; }
-
-.cf:after {
-  clear: both; }
-
-.cf {
-  *zoom: 1; }
-
-h1, h2, h3 {
-  font-family: "superior";
-  margin: 0; }
-
-h4, h5 {
-  font-family: "cooper-hewitt";
-  margin: 0; }
-
-a {
-  color: #333333;
-  text-decoration: none;
-  border-bottom: 2px dashed;
-  padding-bottom: 2px; }
-  a:hover {
-    text-decoration: none;
-    border-bottom: 2px solid; }
-
-body {
-  padding: 20px;
-  color: #333333;
-  position: relative;
-  font-family: "cooper-hewitt", Helvetica Neue, Helvetica, Arial, sans-serif;
-  -webkit-animation: colorChange 20s linear 0s infinite;
-  animation: colorChange 20s linear 0s infinite; }
-
-.page {
-  background: white;
-  padding: 5%;
-  padding-top: 80px; }
-
-.wrap {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto; }
-
-header {
-  margin: 0 0 80px 0;
-  text-align: center; }
-  header h1 {
-    mix-blend-mode: multiply;
-    font-family: "superior";
-    font-size: 60px;
-    line-height: 60px;
-    position: relative;
-    margin-bottom: 80px; }
-    header h1 span {
-      position: relative; }
-
-table {
-  border: none;
-  outline: none;
-  margin: 60px 0; }
-  table tr, table td {
-    border: none;
-    outline: none;
-    border-collapse: collapse; }
-  table td {
-    position: relative;
-    width: 50%; }
-    table td h3 {
-      position: relative; }
-
-h2.logo {
-  font-family: "superior";
-  font-size: 60px;
-  line-height: 60px;
-  margin-bottom: 20px; }
-
-.tagline {
-  font-size: 40px;
-  font-family: "cooper-hewitt";
-  text-transform: uppercase; }
-
-h4 {
-  font-size: 20px; }
-
-section {
-  margin: 80px 0; }
-  section h2 {
-    font-size: 40px;
-    text-align: center; }
-  section.clients {
-    text-align: center; }
-    section.clients h1 {
-      margin-bottom: 20px; }
-    section.clients ul {
-      padding: 0;
-      margin: 0 auto;
-      text-align: center; }
-    section.clients li {
-      list-style: none;
-      display: inline-block;
-      margin: 10px; }
-      section.clients li a {
-        font-size: 24px;
-        text-align: center;
-        background: #F2F2F2;
-        border: none;
-        display: block;
-        padding: 0 10px;
-        height: 60px;
-        line-height: 64px; }
-        section.clients li a:hover {
-          background: #FFFF00; }
-  section.contact {
-    text-align: center;
-    font-family: "cooper-hewitt";
-    font-size: 20px; }
-    section.contact span {
-      display: inline-block;
-      margin-right: 40px;
-      margin-bottom: 20px; }
-      section.contact span:last-child {
-        margin-right: 0; }
-  section.partners .partner {
-    text-align: center;
-    position: relative;
-    float: left;
-    width: 50%; }
-    section.partners .partner h3 {
-      font-size: 40px;
-      margin-bottom: 10px; }
-    section.partners .partner h4 {
-      text-transform: uppercase;
-      color: #D84C90; }
-    section.partners .partner p {
-      font-style: 14px;
-      line-height: normal;
-      margin: 20px 0; }
-
-footer {
-  font-family: "superior";
-  margin: 80px auto 10px;
-  text-align: center; }
-  footer small {
-    text-transform: uppercase; }
-
 @-webkit-keyframes colorChange {
   0% {
     background: -webkit-linear-gradient(left, #9effe4, #9ee2ff);
@@ -993,29 +822,293 @@ footer {
   100% {
     background: linear-gradient(to right, #9effe4, #9ee2ff); } }
 
+header small, footer small, section.contact span strong {
+  letter-spacing: 0.6rem; }
+
+header small {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+section.clients ul {
+  *zoom: 1; }
+  section.clients ul::before, section.clients ul::after {
+    content: " ";
+    display: table; }
+  section.clients ul::after {
+    clear: both; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+@font-face {
+  font-family: "superior";
+  src: url("/fonts/superior/superior-title-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "superior";
+  src: url("/fonts/superior/superior-title-black-italic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: "cooper-hewitt";
+  src: url("/fonts/cooper-hewitt/cooper-hewitt-book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "cooper-hewitt";
+  src: url("/fonts/cooper-hewitt/cooper-hewitt-book-italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic; }
+
+html {
+  font-size: 16px; }
+
+body {
+  padding: 1rem;
+  color: #F2F2F2;
+  position: relative;
+  font-family: "cooper-hewitt", Helvetica Neue, Helvetica, Arial, sans-serif;
+  -webkit-animation: colorChange 20s linear 0s infinite;
+  animation: colorChange 20s linear 0s infinite; }
+
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative; }
+  a::after {
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+    background: #9EFFE5;
+    transition: width 0.2s ease;
+    z-index: 1; }
+  a::hover {
+    color: #9EFFE5;
+    text-decoration: none; }
+    a::hover::after {
+      width: 100%; }
+  a:active, a:focus {
+    color: #9EFFE5;
+    outline: none;
+    border: none; }
+    a:active::after, a:focus::after {
+      display: none;
+      outline: none;
+      border: none; }
+
+.page {
+  background: #333333;
+  padding: 1rem;
+  padding-top: 18rem; }
+
+.wrap {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20rem; }
+  header small {
+    display: block;
+    margin: 0;
+    width: 100%;
+    font-size: 0.5rem;
+    font-family: "cooper-hewitt";
+    text-align: center; }
+  header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/bredinbone@2x.png');
+    background-image: none, url('/images/bredinbone.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    background-position: 50% 50%;
+    opacity: 0.02;
+    z-index: 0; }
+
+.hero {
+  color: #F2F2F2; }
+
+table {
+  border: none;
+  outline: none;
+  margin: 60px 0; }
+  table tr, table td {
+    border: none;
+    outline: none;
+    border-collapse: collapse; }
+  table td {
+    position: relative;
+    width: 50%; }
+    table td h3 {
+      position: relative; }
+
+section {
+  margin: 80px 0; }
+  section h2 {
+    text-align: center; }
+  section.clients {
+    text-align: center; }
+    section.clients h1 {
+      margin-bottom: 20px; }
+    section.clients ul {
+      padding: 0;
+      margin: 0 auto;
+      text-align: center; }
+    section.clients li {
+      list-style: none;
+      display: block;
+      float: left;
+      width: 30%;
+      padding: 1.6667%; }
+      section.clients li a {
+        font-size: 1rem;
+        text-align: center;
+        background: #3d3d3d;
+        color: #F2F2F2;
+        border: none;
+        display: block;
+        width: 100%;
+        height: 60px;
+        line-height: 64px; }
+        section.clients li a::after {
+          display: none; }
+        section.clients li a:hover {
+          background: #FFFF00;
+          color: #333333; }
+  section.contact {
+    color: #4d4d4d;
+    font-family: "superior"; }
+    section.contact span {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 3rem; }
+      section.contact span strong {
+        margin-right: 0.6rem; }
+      section.contact span a {
+        font-weight: normal; }
+  section.partners .partner {
+    text-align: center;
+    position: relative;
+    float: left;
+    width: 50%; }
+    section.partners .partner h3 {
+      margin-bottom: 10px; }
+    section.partners .partner h4 {
+      text-transform: uppercase;
+      color: #D84C90; }
+    section.partners .partner p {
+      margin: 1rem 0; }
+
+footer {
+  margin: 1rem auto;
+  text-align: center;
+  font-weight: bold;
+  color: #4d4d4d; }
+  footer div {
+    margin: 0.5rem 0; }
+  footer small {
+    font-family: "cooper-hewitt";
+    font-size: 0.6rem;
+    text-transform: uppercase; }
+  footer strong {
+    font-size: 0.75rem;
+    font-family: "superior"; }
+
+h1, h2, h3, h4, h5 {
+  line-height: initial;
+  margin: 0; }
+
+h1, h2, h3 {
+  font-family: "superior"; }
+
+h4, h5 {
+  font-family: "cooper-hewitt"; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.6rem; }
+
+input, textarea, button, select, a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 @media only screen and (max-width: 800px) {
-  body {
-    padding: 10px; }
   .page {
-    padding: 5%; }
+    padding: 1rem; }
+  header {
+    display: none; }
   h2.logo {
     font-size: 40px;
-    line-height: 40px; }
-  section.contact span {
-    display: block;
-    margin: 30px 0; } }
+    line-height: 40px; } }
 
-@media only screen and (max-width: 480px) {
-  .page {
-    padding: 10% 2%; }
-  header h2.logo {
-    font-size: 70px;
-    line-height: 60px; }
+@media only screen and (max-width: 540px) {
   section.partners .partner {
+    text-align: left;
     display: block;
     width: 100%;
     margin-bottom: 40px; }
+    section.partners .partner p {
+      font-size: 2rem;
+      line-height: 2.6rem; }
   section.clients ul li {
-    display: block; }
-    section.clients ul li a {
-      display: inline-block; } }
+    width: 48%;
+    padding: 1%; } }
+
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 0.5rem; }
+  header h2.logo {
+    font-size: 70px;
+    line-height: 60px; }
+  section.contact span {
+    margin-bottom: 2rem;
+    line-height: normal; }
+    section.contact span strong, section.contact span a {
+      display: block; }
+    section.contact span strong {
+      font-size: 0.7rem;
+      font-family: "cooper-hewitt";
+      text-transform: uppercase; }
+    section.contact span a {
+      font-size: 2rem; } }
+
+@media only screen and (max-width: 380px) {
+  section.clients ul li {
+    width: 96%;
+    padding: 2%; } }
