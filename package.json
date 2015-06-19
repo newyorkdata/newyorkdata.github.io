@@ -8,6 +8,9 @@
     "name": "Matthew Conlen",
     "email": "code@mathisonian.com"
   },
+  "scripts": {
+    "build": "gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/newyorkdata/newyorkdata.github.io"
